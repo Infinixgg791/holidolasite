@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    overflow: hidden; /* Скрываем прокрутку для анимации */
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2), rgba(0, 0, 255, 0.2));
+    animation: wave 10s linear infinite;
+    z-index: -1; /* Помещаем волну на задний план */
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px); /* Высота волны */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    background-color: #222;
+    padding: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-item {
+    padding: 15px 20px;
+    transition: background-color 0.3s, color 0.3s, text-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-item:hover {
+    background-color: rgb(255, 105, 180);
+    color: #fff;
+    text-shadow: 0 0 10px rgb(255, 20, 147), 0 0 20px rgba(255, 20, 147, 0.5);
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+#content {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#content.show {
+    opacity: 1;
+}
+
+h1, h2, h3 {
+    color: rgb(255, 105, 180);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 15px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: rgb(0, 204, 255);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: rgb(255, 105, 180);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
